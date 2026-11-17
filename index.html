@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>niel@terminal</title>
+  <meta name="description" content="Niel Adrian Garig, full-stack developer. An interactive terminal profile: type adrianniel to begin." />
+  <meta name="theme-color" content="#070a13" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="backdrop" aria-hidden="true"></div>
+
+  <main class="window" aria-label="Terminal">
+    <header class="titlebar">
+      <div class="tab">
+        <span class="ps-icon" aria-hidden="true">
+          <svg viewBox="0 0 18 18"><rect width="18" height="18" rx="4" /><path d="M4 5l5 4-5 4M10 13.5h4" /></svg>
+        </span>
+        <span>PowerShell</span>
+        <span class="tab-close" aria-hidden="true">×</span>
+      </div>
+      <span class="tab-add" aria-hidden="true">+</span>
+      <div class="controls" aria-hidden="true">
+        <span>—</span><span>▢</span><span>✕</span>
+      </div>
+    </header>
+
+    <section class="screen" id="screen">
+      <div id="output" aria-live="polite"></div>
+
+      <form class="prompt-line" id="form" autocomplete="off">
+        <label for="input" class="prompt">&gt;</label>
+        <div class="input-wrap">
+          <span class="mirror" id="mirror"></span><span class="caret" aria-hidden="true"></span>
+          <input id="input" type="text" spellcheck="false" autocapitalize="off" aria-label="Type a command" />
+        </div>
+      </form>
+
+      <nav class="chips" id="chips" aria-label="Suggested commands"></nav>
+    </section>
+
+    <footer class="statusbar">
+      <span><span class="dot"></span> online</span>
+      <span class="hint">↑↓ history · Tab complete · Ctrl+L clear</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
