@@ -39,6 +39,7 @@ const PROFILE = {
       name: "Dagohoy Pharmacy",
       desc: "Point-of-sale and pharmacy operations workspace with role-based screens for owners, admins and cashiers.",
       stack: "React · TypeScript · Vite · NestJS · MySQL",
+      link: "https://dagohoypharmacy.boncales.com/",
     },
   ],
   contact: [
