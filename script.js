@@ -25,6 +25,13 @@ const PROFILE = {
   },
   projects: [
     {
+      name: "Tumbli",
+      desc: "A floating water buddy for Windows: a little bottle with a face that docks at the screen edge, fills up as you drink and reminds you to take a break.",
+      stack: "Tauri 2 · Rust · React · TypeScript · Vite",
+      link: "https://github.com/adrianniel/Tumbli",
+      linkLabel: "repo ↗",
+    },
+    {
       name: "iQueue",
       desc: "Queue-management platform for campus offices: a student mobile app, an admin portal and a live display board.",
       stack: "Expo · React Native · Next.js · Express · Prisma · MariaDB",
@@ -180,7 +187,7 @@ const COMMANDS = {
     run: () =>
       PROFILE.projects.map((p) => {
         const n = el("div", "project");
-        const title = p.link ? `${esc(p.name)}  <a href="${p.link}" target="_blank" rel="noopener">live ↗</a>` : esc(p.name);
+        const title = p.link ? `${esc(p.name)}  <a href="${p.link}" target="_blank" rel="noopener">${esc(p.linkLabel || "live ↗")}</a>` : esc(p.name);
         n.innerHTML = `<h3><span class="accent">▸</span> ${title}</h3><p>${esc(p.desc)}</p><p class="violet">${esc(p.stack)}</p>`;
         return n;
       }),
