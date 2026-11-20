@@ -28,8 +28,7 @@ const PROFILE = {
       name: "Tumbli",
       desc: "A floating water buddy for Windows: a little bottle with a face that docks at the screen edge, fills up as you drink and reminds you to take a break.",
       stack: "Tauri 2 · Rust · React · TypeScript · Vite",
-      link: "https://github.com/adrianniel/Tumbli",
-      linkLabel: "repo ↗",
+      link: "https://apps.microsoft.com/detail/9N6798TPR3KX",
     },
     {
       name: "iQueue",
